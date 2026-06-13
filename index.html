@@ -14,7 +14,7 @@
   <body>
     <nav class="nav-bar">
       <div class="left-nav">
-        <button class="spotify-icon"><img src="Icons/spotify-icon.svg" alt="Spotify-icon" /></button>
+        <button class="spotify-icon js-spotify-btn"><img src="Icons/spotify-icon.svg" alt="Spotify-icon" /></button>
         <button class="home-icon js-home-btn"><img src="Icons/home-icon.svg" alt="Home-icon" /></button>
       </div>
       <div class="middle-nav">
@@ -216,7 +216,7 @@
         <img src="Icons/home-icon.svg" alt="home-icon" />
         <div>Home</div>
       </div>
-      <div class="mobile-nav-bar-div">
+      <div class="mobile-nav-bar-div js-search-btn">
         <img src="Icons/search-icon.svg" alt="search-icon" />
         <div>Search</div>
       </div>
@@ -224,7 +224,7 @@
         <img src="Icons/library-icon.svg" alt="library-icon" />
         <div>Your Library</div>
       </div>
-      <div class="mobile-nav-bar-div">
+      <div class="mobile-nav-bar-div js-spotify-btn">
         <img src="Icons/spotify-icon.svg" alt="spotify-icon" />
         <div>Spotify</div>
       </div>
@@ -237,6 +237,43 @@
       </div>
       <div class="mobile-library-list js-mobile-library-list">
         <!-- playlists render here -->
+      </div>
+    </div>
+
+    <div class="mobile-search-panel js-mobile-search-panel">
+      <div class="mobile-search-header">
+        <h2>Search</h2>
+        <div class="mobile-search-input-div">
+          <img src="Icons/search-icon.svg" alt="search-icon" />
+          <input type="text" placeholder="Artists, songs, or podcasts" class="mobile-search-input" />
+        </div>
+      </div>
+      <div class="mobile-search-genres">
+        <p class="genres-title">Your top genres</p>
+        <div class="genres-grid">
+          <div class="genre-card" style="background-color: #1e3264">Pop</div>
+          <div class="genre-card" style="background-color: #7358ff">Indie</div>
+          <div class="genre-card" style="background-color: #e8115b">Rock</div>
+          <div class="genre-card" style="background-color: #e91429">R&B</div>
+          <div class="genre-card" style="background-color: #1e3264">Hip-Hop</div>
+          <div class="genre-card" style="background-color: #148a08">Electronic</div>
+          <div class="genre-card" style="background-color: #e8115b">Jazz</div>
+          <div class="genre-card" style="background-color: #bc5900">Classical</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="disclaimer-overlay js-disclaimer-overlay">
+      <div class="disclaimer-modal">
+        <img src="Icons/spotify-icon.svg" alt="spotify-icon" />
+        <h2>Educational Project</h2>
+        <p>
+          This is a Spotify clone built for learning purposes only. All trademarks, logos, and brand names belong to
+          their respective owners. This project is not affiliated with, endorsed by, or connected to Spotify AB in any
+          way.
+        </p>
+        <p class="disclaimer-sub">No copyright infringement intended.</p>
+        <button class="disclaimer-close js-disclaimer-close">Got it</button>
       </div>
     </div>
 

@@ -175,6 +175,7 @@ mobileLibraryList.innerHTML = mobilePlaylistHTML;
 // open panel on library click
 document.querySelector(".js-library-btn").addEventListener("click", () => {
   mobileLibraryPanel.classList.add("active");
+  mobileSearchPanel.classList.remove("active");
 });
 
 // close panel on home click
@@ -206,4 +207,33 @@ document.querySelectorAll(".mobile-playlist-card").forEach((card) => {
     const matchedSongs = allSongFiles.find((p) => p["id"] == playlistId);
     renderPlaylistSongs(matchedSongs);
   });
+});
+
+const mobileSearchPanel = document.querySelector(".js-mobile-search-panel");
+
+document.querySelector(".js-search-btn").addEventListener("click", () => {
+  mobileSearchPanel.classList.add("active");
+  mobileLibraryPanel.classList.remove("active");
+});
+
+document.querySelectorAll(".js-home-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    mobileSearchPanel.classList.remove("active");
+  });
+});
+
+const disclaimerOverlay = document.querySelector(".js-disclaimer-overlay");
+
+document.querySelector(".js-spotify-btn").addEventListener("click", () => {
+  disclaimerOverlay.classList.add("active");
+});
+
+document.querySelector(".js-disclaimer-close").addEventListener("click", () => {
+  disclaimerOverlay.classList.remove("active");
+});
+
+disclaimerOverlay.addEventListener("click", (e) => {
+  if (e.target === disclaimerOverlay) {
+    disclaimerOverlay.classList.remove("active");
+  }
 });

@@ -287,3 +287,10 @@ function updatePlayButton() {
 function findIndexOfCurrentSongList(songList, songListSrc, currentSongSrc) {
   return songList.findIndex((p) => p[songListSrc] == currentSongSrc);
 }
+
+
+// default song on load
+const defaultSong = favSongs[6];
+currentSongList = favSongs;
+currentSongIndex = 6;
+currentAudio.src = defaultSong["song-src"];
