@@ -89,12 +89,6 @@ export const favSongs = [
     "song-album-name": "Dreamland",
     "song-src": "./songs/Robert Miles - Children [Dream Version] - Robert Miles.mp3",
     "song-poster-src": "./Images/song-images/children-dream.jpg"
-  },{
-    "song-name": "Calm your Soul",
-    "song-artist-name": "Blaezy",
-    "song-album-name": "S0Ul",
-    "song-src": "./songs/calm your soul [7_VdMcmBYl8].mp3",
-    "song-poster-src": "./Images/Sung jin woo.jpeg",
   }
 ];
 
