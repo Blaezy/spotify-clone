@@ -228,6 +228,10 @@ document.querySelector(".js-spotify-btn").addEventListener("click", () => {
   disclaimerOverlay.classList.add("active");
 });
 
+document.querySelector(".js-mobile-spotify-btn").addEventListener("click", () => {
+  disclaimerOverlay.classList.add("active");
+});
+
 document.querySelector(".js-disclaimer-close").addEventListener("click", () => {
   disclaimerOverlay.classList.remove("active");
 });
