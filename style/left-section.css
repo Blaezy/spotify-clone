@@ -1,0 +1,188 @@
+.main-page {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.left-section {
+  background-color: #121212;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  flex-direction: column;
+  width: 25vw;
+  /* height: calc(100vh - 50px); */
+  /* margin-left: 10px; */
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: width 0.15s ease-in-out;
+}
+
+.library-title {
+  display: flex;
+  gap: 10px;
+  justify-content: start;
+  align-items: center;
+  margin: 20px 10px;
+}
+.library-title img {
+  filter: invert();
+  width: 30px;
+  height: 30px;
+}
+.library-title p {
+  font-weight: bold;
+}
+
+.playlist-section {
+  width: 100%;
+  flex: 1;
+  overflow-y: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.playlist-section::-webkit-scrollbar {
+  width: 12px;
+}
+.playlist-section::-webkit-scrollbar-track {
+  background: transparent;
+}
+.playlist-section::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  transition: background-color 0.5s ease;
+}
+.playlist-section::-webkit-scrollbar-thumb {
+  background-color: var(--thumb-color, transparent);
+}
+
+/* here is the playlist card */
+
+.playlist-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.card-img-div {
+  position: relative;
+}
+.card-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+.card-names {
+  overflow: hidden;
+}
+.playlist-card-name {
+  width: 100%;
+  font-size: 16px;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.playlist-card-artist-name {
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-play-icon {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  filter: invert();
+  right: 25%;
+  bottom: 25%;
+  opacity: 0;
+}
+
+.playlist-card:hover {
+  background-color: #1f1f1f;
+}
+.playlist-card:hover .card-play-icon {
+  opacity: 1;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 20px;
+  font-size: 12px;
+}
+.footer-links a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-language {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 18px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+}
+.footer-language img {
+  filter: invert();
+  width: 15px;
+}
+
+@media (max-width: 900px) {
+  .left-section {
+    width: 10vw;
+    justify-content: center;
+    transition: width 0.15s ease-in-out;
+  }
+
+  .library-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .library-title p {
+    display: none;
+    transition: opacity 0.15s;
+  }
+
+  .playlist-section {
+    padding: 0;
+    align-items: center;
+    transition: padding 0.15s;
+  }
+  .playlist-card {
+    padding: 6px; /* or 0 */
+    justify-content: center;
+  }
+  .card-img-div {
+    margin: 0 auto;
+  }
+  .playlist-card .card-names {
+    display: none;
+  }
+  .playlist-section::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+@media (max-width:600px){
+  .left-section{
+    display: none;
+  }
+}

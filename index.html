@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify-Home</title>
+    <link rel="icon" href="Icons/spotify-icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style/nav-bar.css" />
+    <link rel="stylesheet" href="style/left-section.css" />
+    <link rel="stylesheet" href="style/right-section.css" />
+    <link rel="stylesheet" href="style/playlist-page.css" />
+    <link rel="stylesheet" href="style/player-control.css" />
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <div class="left-nav">
+        <button class="spotify-icon"><img src="Icons/spotify-icon.svg" alt="Spotify-icon" /></button>
+        <button class="home-icon js-home-btn"><img src="Icons/home-icon.svg" alt="Home-icon" /></button>
+      </div>
+      <div class="middle-nav">
+        <button class="search-icon"><img src="Icons/search-icon.svg" alt="Search-icon" /></button>
+        <input class="search-input" name="search-input" type="text" placeholder="What do you want to play?" />
+        <div class="divider"></div>
+        <button class="browse-icon"><img src="Icons/browse-icon.svg" alt="Browse-icon" /></button>
+      </div>
+      <div class="right-nav">
+        <button class="signup-btn">Sign up</button>
+        <button class="login-btn">Log in</button>
+      </div>
+    </nav>
+
+    <main class="main-page">
+      <div class="left-section">
+        <div class="library-title">
+          <img src="Icons/library-icon.svg" alt="Library-icon" />
+          <p>Your Library</p>
+        </div>
+
+        <div class="playlist-section js-playlist-section">
+          <!-- playlist content -->
+        </div>
+      </div>
+
+      <div class="right-section js-right-section">
+        <div class="home-page js-home-page">
+          <h2>Favourite Songs</h2>
+
+          <div class="scroll-wrapper">
+            <button class="left-btn-scroll-first"><img src="Icons/left-arrow-icon.svg" /></button>
+            <div class="fav-song-div js-fav-song-div js-fav-song-render">
+              <!-- here content are render by js  -->
+            </div>
+            <button class="right-btn-scroll-first"><img src="Icons/right-arrow-icon.svg" /></button>
+          </div>
+
+          <h2>Artists</h2>
+
+          <div class="scroll-wrapper">
+            <button class="left-btn-scroll-second"><img src="Icons/left-arrow-icon.svg" /></button>
+            <div class="artists-div js-artists-div js-artists-render">
+              <!-- here are the artists from js  -->
+            </div>
+            <button class="right-btn-scroll-second"><img src="Icons/right-arrow-icon.svg" /></button>
+          </div>
+        </div>
+
+        <div class="playlist-page js-playlist-page">
+          <div class="playlist-info">
+            <div class="playlist-info-img js-playlist-info-img">
+              <img src="Images/cute-omen.jpeg" alt="playlist-image" />
+            </div>
+            <div class="playlist-info-details">
+              <p class="playlist-title js-playlist-title">Electronic Focus</p>
+              <p class="playlist-description js-playlist-description">
+                Recopilation of the best of gaming OST themes carefully mixed so no need of anything else enjoy the
+                music while you can
+              </p>
+              <div class="playlist-info-creator">
+                <p class="js-playlist-artist">Ikerjer </p>
+                <span class="low-color js-total-songs"> • Songs</span>
+                <span class="low-color js-total-songs-duration">0:00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="playlist-tool">
+            <div class="playlist-play-icon js-playlist-btn">
+              <img src="Icons/play-icon.svg" alt="play-icon" />
+            </div>
+            <div class="playlist-save-icon">
+              <img src="Icons/plus-icon.svg" alt="play-icon" />
+            </div>
+            <div class="playlist-threedot-icon">
+              <img src="Icons/threedot-icon.svg" alt="play-icon" />
+            </div>
+          </div>
+
+          <div class="playlist-song">
+            <div class="list-header">
+              <p class="song-cnt">#</p>
+              <p class="song-title">Title</p>
+              <p class="song-album">Album</p>
+              <div class="song-duration-img"><img src="Icons/duration-icon.svg" alt="duration-icon" /></div>
+            </div>
+            <hr class="horizontal-line-playlist-song" />
+
+            <div class="playlist-song-list js-playlist-song-list">
+              <!-- here are the playlist all songs render by js -->
+            </div>
+          </div>
+        </div>
+
+        <footer>
+          <hr class="horizontal-line" />
+          <div class="footer-links-right">
+            <div class="footer-col">
+              <h4>Company</h4>
+              <a href="#">About</a>
+              <a href="#">Jobs</a>
+              <a href="#">For the Record</a>
+            </div>
+
+            <div class="footer-col">
+              <h4>Communities</h4>
+              <a href="#">For Artists</a>
+              <a href="#">Developers</a>
+              <a href="#">Advertising</a>
+              <a href="#">Investors</a>
+              <a href="#">Vendors</a>
+            </div>
+
+            <div class="footer-col">
+              <h4>Useful links</h4>
+              <a href="#">Support</a>
+              <a href="#">Free Mobile App</a>
+              <a href="#">Popular by Country</a>
+              <a href="#">Import your music</a>
+            </div>
+
+            <div class="footer-col">
+              <h4>Spotify Plans</h4>
+              <a href="#">Premium Lite</a>
+              <a href="#">Premium Standard</a>
+              <a href="#">Premium Platinum</a>
+              <a href="#">Premium Student</a>
+              <a href="#">Spotify Free</a>
+            </div>
+
+            <div class="footer-social">
+              <button title="instagram"><img src="Icons/instagram-icon.svg" /></button>
+              <button title="twitter"><img src="Icons/twitter-icon.svg" /></button>
+              <button title="facebook"><img src="Icons/facebook-icon.svg" /></button>
+            </div>
+          </div>
+          <hr class="horizontal-line" />
+          <p class="copyright-footer">&copy; 2026 Spotify AB</p>
+        </footer>
+      </div>
+    </main>
+
+    <div class="player-control">
+      <div class="left-player-control">
+        <div class="song-card-title">
+          <div class="song-card-title-img js-player-song-card-img">
+            <img src="Images/song-images/Double-Life.jpg" alt="Double-Life" />
+          </div>
+          <div class="song-card-title-info">
+            <div class="js-song-title">Double Life from Despicable me</div>
+            <div class="js-song-artist">Pharrell williams lore</div>
+          </div>
+        </div>
+      </div>
+      <div class="middle-player-control">
+        <div class="middle-upper-player-control">
+          <button class="shuffle-btn"><img src="Icons/shuffle-icon.svg" alt="shuffle-icon" /></button>
+          <button class="js-previous-song-btn"><img src="Icons/previous-song-icon.svg" alt="previous-song-icon" /></button>
+          <button class="music-play-btn js-music-play-btn">
+            <img src="Icons/play-icon.svg" alt="play-pause-icon" />
+          </button>
+          <button class="js-next-song-btn"><img src="Icons/next-song-icon.svg" alt="next-song-icon" /></button>
+          <button class="repeat-btn"><img src="Icons/repeat-song-icon.svg" alt="repeat-song-icon" /></button>
+        </div>
+        <div class="middle-bottom-player-control">
+          <div class="song-current-time js-song-current-time">0:00</div>
+          <div class="progress-bar-container">
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill js-progress-bar-fill" id="progressFill">
+                <div class="progress-dot"></div>
+              </div>
+            </div>
+          </div>
+          <div class="song-duration-time js-song-duration-time">0:00</div>
+        </div>
+      </div>
+      <div class="right-player-control">
+        <button><img src="Icons/mic-lyrics-icon.svg" alt="mic-lyrics-icon" /></button>
+        <button><img src="Icons/device-icon.svg" alt="device-icon" /></button>
+        <button class="volume-bar">
+          <img src="Icons/volume-high-icon.svg" alt="volume-high-icon" />
+          <div class="volume-progress-bar-container">
+            <div class="volume-progress-bar-bg">
+              <div class="volume-progress-bar-fill" id="progressFill">
+                <div class="volume-progress-dot"></div>
+              </div>
+            </div>
+          </div>
+        </button>
+        <button class="fullscreen-btn"><img src="Icons/fullscreen-icon.svg" alt="fullscreen-icon" /></button>
+      </div>
+    </div>
+
+    <div class="mobile-nav-bar">
+      <div class="mobile-nav-bar-div js-home-btn">
+        <img src="Icons/home-icon.svg" alt="home-icon" />
+        <div>Home</div>
+      </div>
+      <div class="mobile-nav-bar-div">
+        <img src="Icons/search-icon.svg" alt="search-icon" />
+        <div>Search</div>
+      </div>
+      <div class="mobile-nav-bar-div js-library-btn">
+        <img src="Icons/library-icon.svg" alt="library-icon" />
+        <div>Your Library</div>
+      </div>
+      <div class="mobile-nav-bar-div">
+        <img src="Icons/spotify-icon.svg" alt="spotify-icon" />
+        <div>Spotify</div>
+      </div>
+    </div>
+
+    <script type="module" src="script/render-main-page.js"></script>
+    <script type="module" src="script/script.js"></script>
+    <script type="module" src="script/play-song.js"></script>
+  </body>
+</html>
