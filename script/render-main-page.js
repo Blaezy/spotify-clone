@@ -152,3 +152,58 @@ async function renderPlaylistSongs(matchedSongs) {
   document.querySelector(".js-total-songs-duration").innerHTML = `about ${formatTime(totalDuration)}`;
   initPlaylistSongCards();
 }
+
+// Mobile library panel
+const mobileLibraryPanel = document.querySelector(".js-mobile-library-panel");
+const mobileLibraryList = document.querySelector(".js-mobile-library-list");
+
+// render same playlist cards into mobile panel
+let mobilePlaylistHTML = "";
+for (const playlist of playlists) {
+  mobilePlaylistHTML += `<div class="playlist-card mobile-playlist-card">
+    <div class="card-img-div">
+      <img class="card-img" src="${playlist["playlist-img"]}" alt="playlist-card-img" />
+    </div>
+    <div class="card-names">
+      <p class="playlist-card-name" data-playlist-description='${playlist["playlist-description"]}' data-playlist-song-id='${playlist["playlist-id"]}'>${playlist["playlist-name"]}</p>
+      <p class="playlist-card-artist-name">${playlist["playlist-artist"]}</p>
+    </div>
+  </div>`;
+}
+mobileLibraryList.innerHTML = mobilePlaylistHTML;
+
+// open panel on library click
+document.querySelector(".js-library-btn").addEventListener("click", () => {
+  mobileLibraryPanel.classList.add("active");
+});
+
+// close panel on home click
+document.querySelectorAll(".js-home-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    mobileLibraryPanel.classList.remove("active");
+  });
+});
+
+// clicking a playlist inside mobile panel
+document.querySelectorAll(".mobile-playlist-card").forEach((card) => {
+  card.addEventListener("click", () => {
+    mobileLibraryPanel.classList.remove("active");
+    homePage.style.display = "none";
+    playlistPage.style.display = "block";
+    mainPage.scrollTo({ top: 0, behavior: "smooth" });
+
+    const playlistCardImg = card.querySelector(".card-img").src;
+    const playlistCardName = card.querySelector(".playlist-card-name").innerHTML;
+    const playlistCardArtist = card.querySelector(".playlist-card-artist-name").innerHTML;
+    const playlistDescription = card.querySelector(".playlist-card-name").dataset.playlistDescription;
+
+    document.querySelector(".js-playlist-info-img img").src = playlistCardImg;
+    document.querySelector(".js-playlist-title").innerHTML = playlistCardName;
+    document.querySelector(".js-playlist-description").innerHTML = playlistDescription;
+    document.querySelector(".js-playlist-artist").innerHTML = playlistCardArtist;
+
+    const playlistId = card.querySelector(".playlist-card-name").dataset.playlistSongId;
+    const matchedSongs = allSongFiles.find((p) => p["id"] == playlistId);
+    renderPlaylistSongs(matchedSongs);
+  });
+});

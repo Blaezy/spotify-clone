@@ -82,6 +82,7 @@
 }
 .card-names {
   overflow: hidden;
+  flex: 1;
 }
 .playlist-card-name {
   width: 100%;
@@ -173,7 +174,7 @@
   .card-img-div {
     margin: 0 auto;
   }
-  .playlist-card .card-names {
+  .left-section .playlist-card .card-names {
     display: none;
   }
   .playlist-section::-webkit-scrollbar {

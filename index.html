@@ -76,7 +76,7 @@
                 music while you can
               </p>
               <div class="playlist-info-creator">
-                <p class="js-playlist-artist">Ikerjer </p>
+                <p class="js-playlist-artist">Ikerjer</p>
                 <span class="low-color js-total-songs"> • Songs</span>
                 <span class="low-color js-total-songs-duration">0:00</span>
               </div>
@@ -173,7 +173,9 @@
       <div class="middle-player-control">
         <div class="middle-upper-player-control">
           <button class="shuffle-btn"><img src="Icons/shuffle-icon.svg" alt="shuffle-icon" /></button>
-          <button class="js-previous-song-btn"><img src="Icons/previous-song-icon.svg" alt="previous-song-icon" /></button>
+          <button class="js-previous-song-btn">
+            <img src="Icons/previous-song-icon.svg" alt="previous-song-icon" />
+          </button>
           <button class="music-play-btn js-music-play-btn">
             <img src="Icons/play-icon.svg" alt="play-pause-icon" />
           </button>
@@ -225,6 +227,16 @@
       <div class="mobile-nav-bar-div">
         <img src="Icons/spotify-icon.svg" alt="spotify-icon" />
         <div>Spotify</div>
+      </div>
+    </div>
+
+    <div class="mobile-library-panel js-mobile-library-panel">
+      <div class="mobile-library-header">
+        <img src="Icons/library-icon.svg" alt="library-icon" />
+        <p>Your Library</p>
+      </div>
+      <div class="mobile-library-list js-mobile-library-list">
+        <!-- playlists render here -->
       </div>
     </div>
 
